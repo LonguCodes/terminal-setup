@@ -1,7 +1,7 @@
 sudo -k
-if ! sudo true
+if ! sudo false
 then
-    echo "This script needs to be run as administrator"
+    echo "Do not run this script with sudo!"
     exit -1
 fi
 
@@ -43,7 +43,7 @@ cp tmux.conf ~/.tmux.conf
 command sudo ${INSTALL_COMMAND} zsh 
 command sudo ${INSTALL_COMMAND} curl 
 command sudo ${INSTALL_COMMAND} git 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUNZSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
 curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
     | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
 
@@ -56,7 +56,7 @@ then
 fi
 if command -v chsh &> /dev/null
 then
-	command chsh -s $(which tmux)
+	command sudo chsh -s $(which tmux) $USER
 fi
 
 
