@@ -1,0 +1,44 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+[plugins]
+
+[plugins.branch-manager]
+github = 'elstgav/branch-manager'
+
+[plugins.boss-git]
+github = 'bossjones/boss-git-zsh-plugin'
+
+
+[plugins.syntax-highlight]
+git = 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
+
+[plugins.ssh-connect]
+git = 'https://github.com/gko/ssh-connect.git'
+
+[plugins.autosuggestions]
+git = 'https://github.com/zsh-users/zsh-autosuggestions.git'
+
+[plugins.send]
+github = 'robertzk/send.zsh'
+
+[plugins.sudo]
+github = 'hcgraf/zsh-sudo'
+
+[plugins.256color]
+github = 'chrissicool/zsh-256color'
+
+[plugins.docker]
+remote = 'https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/docker/_docker'
+
+[plugins.appup]
+git = 'https://github.com/Cloudstek/zsh-plugin-appup.git'
