@@ -1,9 +1,3 @@
-sudo -k
-if ! sudo false
-then
-    echo "Do not run this script with sudo!"
-    exit -1
-fi
 
 if command -v apt &> /dev/null
 then
