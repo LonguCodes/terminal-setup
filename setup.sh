@@ -28,7 +28,6 @@ fi
 mkdir -p ~/.config/kitty
 mkdir -p ~/.config/sheldon
 
-# cp ./kitty.conf ~/.config/kitty/kitty.conf
 cp ./plugins.toml ~/.config/sheldon/plugins.toml
 
 cp tmux.conf ~/.tmux.conf
@@ -55,3 +54,5 @@ fi
 
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin && sudo ln -s $HOME/.local/kitty.app/bin/kitty $HOME/.local/bin/kitty 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+bash -c "~/.tmux/plugins/tpm/bindings/install_plugins" > /dev/null
